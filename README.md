@@ -68,7 +68,7 @@ Each test execution is wrapped in a `Stopwatch` to record how long it took in mi
 ```bash
 dotnet run --project CustomTestRunner
 ``` 
-חחחם
+
 ##  Output
 
 After running, results are saved in:
@@ -116,7 +116,7 @@ public class SampleTests
  Add internal unit tests for test runner itself
 
 ## Author
-Michal Vahab␣␣
+Michal Vahab<br>
 GitHub: [@MichalVahab](https://github.com/MichalTzadok/)
 
 
