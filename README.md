@@ -72,11 +72,11 @@ dotnet run --project CustomTestRunner
 ##  Output
 
 After running, results are saved in:
-
+```
 TestResults/
 ├── results.txt # Console-style readable results
 └── results.json # Structured JSON for tooling
-
+```
 
 ---
 
@@ -116,7 +116,7 @@ public class SampleTests
  Add internal unit tests for test runner itself
 
 ## Author
-Michal Vahab
+Michal Vahab␣␣
 GitHub: [@MichalVahab](https://github.com/MichalTzadok/)
 
 
