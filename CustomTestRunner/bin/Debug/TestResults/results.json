@@ -1,0 +1,16 @@
+[
+  {
+    "TestName": "SampleTests.PassingTest",
+    "Passed": true,
+    "ErrorMessage": null,
+    "ExceptionType": null,
+    "DurationMilliseconds": 4
+  },
+  {
+    "TestName": "SampleTests.FailingTest",
+    "Passed": false,
+    "ErrorMessage": "This test fails.",
+    "ExceptionType": "Exception",
+    "DurationMilliseconds": 27
+  }
+]

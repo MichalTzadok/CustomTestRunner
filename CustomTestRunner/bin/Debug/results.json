@@ -1,0 +1,14 @@
+[
+  {
+    "TestName": "SampleTests.Test1",
+    "Passed": true,
+    "ErrorMessage": null,
+    "ExceptionType": null
+  },
+  {
+    "TestName": "SampleTests.Test2",
+    "Passed": false,
+    "ErrorMessage": "Oops, something went wrong",
+    "ExceptionType": "Exception"
+  }
+]

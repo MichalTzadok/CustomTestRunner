@@ -1,0 +1,10 @@
+Test #1: SampleTests.PassingTest
+PASSED
+Duration: 4ms
+
+Test #2: SampleTests.FailingTest
+FAILED - [Exception] This test fails.
+Duration: 27ms
+
+--- Summary ---
+Total: 2, Passed: 1, Failed: 1
