@@ -6,34 +6,50 @@ namespace CustomTestRunner
     public class SampleTests
     {
         [Setup]
-        public void Setup1()
+        public void Init()
         {
-            Console.WriteLine("Setup #1");
+            Console.WriteLine("Setting up test...");
         }
 
-        [Setup]
-        public void Setup2()
+        [MyTest]
+        public void PassingTest()
         {
-            Console.WriteLine("Setup #2");
+            Console.WriteLine("This test passes.");
+        }
+
+        [MyTest]
+        public void FailingTest()
+        {
+            throw new Exception("This test fails.");
+        }
+
+        [MyTest]
+        public void TestWithIntParameter(int x)
+        {
+            Console.WriteLine($"Received int: {x}");
+            if (x != 0)
+                throw new Exception("Expected 0 by default");
+        }
+
+        [MyTest]
+        public void TestWithStringParameter(string msg)
+        {
+            Console.WriteLine($"Message: {msg}");
+            if (msg != "")
+                throw new Exception("Expected empty string by default");
+        }
+
+        [MyTest]
+        public void TestWithBoolParameter(bool flag)
+        {
+            Console.WriteLine($"Boolean flag: {flag}");
         }
 
         [Teardown]
         public void Cleanup()
         {
-            Console.WriteLine("Teardown");
+            Console.WriteLine("Cleaning up after test...");
         }
 
-        [MyTest]
-        public void Test1()
-        {
-            Console.WriteLine("Running Test1");
-        }
-
-        [MyTest]
-        public void Test2()
-        {
-            Console.WriteLine("Running Test2");
-            throw new Exception("Oops, something went wrong");
-        }
     }
 }

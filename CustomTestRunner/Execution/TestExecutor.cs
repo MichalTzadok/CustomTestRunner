@@ -33,6 +33,9 @@ namespace CustomTestRunner.Execution
                     {
                         foreach (var setup in setupMethods)
                             setup.Invoke(instance, null);
+                        // אתחול פרמטרים של המתודה אם קיימים
+                        var parameters = method.GetParameters();
+                        var parameterValues = parameters.Select(p => GetDefaultValue(p.ParameterType)).ToArray();
 
                         method.Invoke(instance, null);
 
@@ -58,6 +61,19 @@ namespace CustomTestRunner.Execution
 
             return results;
         }
+        private object GetDefaultValue(Type type)
+        {
+            if (type == typeof(int)) return 0;
+            if (type == typeof(string)) return string.Empty;
+            if (type == typeof(bool)) return false;
+            if (type == typeof(double)) return 0.0;
+            if (type == typeof(float)) return 0f;
+            if (type == typeof(DateTime)) return DateTime.MinValue;
+            if (type.IsEnum) return Enum.GetValues(type).GetValue(0);
+            if (type.IsValueType) return Activator.CreateInstance(type);
+            return null;
+        }
+
     }
 }
 
