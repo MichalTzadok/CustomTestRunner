@@ -9,8 +9,19 @@ using CustomTestRunner.Attributes;
 
 namespace CustomTestRunner.Execution
 {
+    /// <summary>
+    /// Executes discovered test methods and returns their results.
+    /// Handles setup and teardown logic per test.
+    /// </summary>
+
     public class TestExecutor
     {
+        /// <summary>
+        /// Executes all discovered test methods in the provided test classes.
+        /// </summary>
+        /// <param name="testClasses">Enumerable of test class types to execute</param>
+        /// <returns>List of test results</returns>
+
         public List<TestResult> ExecuteTests(IEnumerable<Type> testClasses)
         {
             var results = new List<TestResult>();

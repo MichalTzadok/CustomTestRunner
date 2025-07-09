@@ -2,6 +2,10 @@
 
 namespace CustomTestRunner.Models
 {
+    /// <summary>
+    /// Represents the result of a single test execution.
+    /// </summary>
+
     public class TestResult
     {
         public string TestName { get; set; }

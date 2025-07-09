@@ -5,6 +5,10 @@ namespace CustomTestRunner
 {
     public class SampleTests
     {
+        /// <summary>
+        /// Sample test class demonstrating usage of [MyTest], [Setup], [Teardown].
+        /// </summary>
+        
         [Setup]
         public void Init()
         {

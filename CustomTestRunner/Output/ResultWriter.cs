@@ -7,8 +7,18 @@ using CustomTestRunner.Models;
 
 namespace CustomTestRunner.Output
 {
+    /// <summary>
+    /// Writes test results to both text and JSON files under TestResults/.
+    /// Also prints a summary to the console.
+    /// </summary>
+
     public class ResultWriter
     {
+        /// <summary>
+        /// Writes test results to text and JSON files in the TestResults directory.
+        /// Also prints a summary to the console.
+        /// </summary>
+        /// <param name="results">List of test results to write</param>
         public void Write(List<TestResult> results)
         {
             int passed = results.Count(r => r.Passed);
